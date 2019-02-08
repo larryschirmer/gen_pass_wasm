@@ -1,0 +1,21 @@
+{
+  "name": "gen_pass",
+  "collaborators": [
+    "Larry Schirmer <larryschirmer@gmail.com>"
+  ],
+  "description": "makes custom passwords",
+  "version": "0.1.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "files": [
+    "gen_pass_bg.wasm",
+    "gen_pass.js",
+    "gen_pass.d.ts"
+  ],
+  "module": "gen_pass.js",
+  "types": "gen_pass.d.ts",
+  "sideEffects": "false"
+}

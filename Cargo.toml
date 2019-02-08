@@ -1,0 +1,15 @@
+[package]
+name = "gen_pass"
+version = "0.1.0"
+authors = ["Larry Schirmer <larryschirmer@gmail.com>"]
+edition = "2018"
+description = "makes custom passwords"
+repository = ""
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2.33"
+rand = "0.6.5"
