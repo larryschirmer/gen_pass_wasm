@@ -1,17 +1,9 @@
-use std::time::{SystemTime, UNIX_EPOCH};
+use std::str;
+extern crate js_sys;
 
 pub fn get_milli_epoch() -> u64 {
-  let epoch_duration = SystemTime::now().duration_since(UNIX_EPOCH).unwrap();
-  let mut epoch: u64 = 0;
-
-  {
-    epoch += epoch_duration.as_secs() * 1000;
-  }
-  {
-    epoch += epoch_duration.subsec_nanos() as u64 / 1_000_000;
-  }
-
-  epoch
+  let epoch = js_sys::Date::now();
+  epoch as u64
 }
 
 fn number_to_vec(n: u32) -> Vec<u32> {
