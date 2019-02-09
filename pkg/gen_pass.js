@@ -1,7 +1,9 @@
 /* tslint:disable */
 import * as wasm from './gen_pass_bg';
 
-let cachedTextDecoder = new TextDecoder('utf-8');
+const lTextDecoder = typeof TextDecoder === 'undefined' ? require('util').TextDecoder : TextDecoder;
+
+let cachedTextDecoder = new lTextDecoder('utf-8');
 
 let cachegetUint8Memory = null;
 function getUint8Memory() {
